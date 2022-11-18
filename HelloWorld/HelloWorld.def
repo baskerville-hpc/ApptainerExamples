@@ -1,8 +1,8 @@
 Bootstrap: docker
-From: ubuntu:22.10
+From: alpine:latest
 
 %post
-    apt-get -y update && apt-get install -y python3 bash
+    apk add python3
 
 %runscript
     python3 -c 'print("Hello World! Hello from our custom Singularity image!")'

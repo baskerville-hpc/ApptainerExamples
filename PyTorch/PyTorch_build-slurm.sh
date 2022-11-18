@@ -11,8 +11,9 @@
 module purge
 module load baskerville
 
+set -e
 unset APPTAINER_BIND
-apptainer run HelloWorld.sif
+apptainer build --force PyTorch.sif PyTorch.def
 
 
 

@@ -10,9 +10,11 @@
 
 module purge
 module load baskerville
+#module load bask-apps/live
+module load CUDA/11.3.1 
 
 unset APPTAINER_BIND
-apptainer run HelloWorld.sif
+apptainer run --nv PyTorch.sif
 
 
 
